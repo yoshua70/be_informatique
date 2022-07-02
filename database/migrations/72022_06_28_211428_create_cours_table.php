@@ -22,6 +22,7 @@ class CreateCoursTable extends Migration
             
             //$table->bigInteger('classe_id')->index();
             
+            $table->timestamps();
             $table->enum('anneeAcademique',['one','two']);
             //$table->primary(['enseignant_id', 'matiere_id' ,'classe_id']);
        

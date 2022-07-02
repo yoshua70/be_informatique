@@ -24,6 +24,7 @@ class CreateEncadrementsTable extends Migration
             
             $table->enum('theme',['one','two']);
             $table->enum('anneeAcademique',['one','two']);
+            $table->timestamps();
             //$table->primary(['enseignant_id', 'etudiant_id']);
         });
             Schema::table('encadrements', function($table) {

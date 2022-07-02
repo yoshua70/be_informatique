@@ -13,7 +13,7 @@ class CreateClassesEtudiantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('classes_etudiants', function (Blueprint $table) {
+        Schema::create('classe_etudiants', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id('id');
             
@@ -22,9 +22,10 @@ class CreateClassesEtudiantsTable extends Migration
             $table->BigInteger('classe_id')->unsigned();
             
             $table->enum('anneeAcademique',['one','two']);
+            $table->timestamps();
             //$table->primary(['etudiant_id', 'classe_id']);
         });
-        Schema::table('classes_etudiants', function($table) {
+        Schema::table('classe_etudiants', function($table) {
             $table->foreign('etudiant_id')  
                   ->references('id')  
                   ->on('etudiants') 
